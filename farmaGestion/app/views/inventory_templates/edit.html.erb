@@ -1,0 +1,31 @@
+<h1>Editing inventory</h1>
+
+<% form_for(@inventory_template) do |f| %>
+  <%= f.error_messages %>
+		<div>
+			  <p>
+			    Nombre: 
+				<%= f.text_field :name %>&nbsp;
+			    Periodicidad:
+				<%=	f.select (:periodicity_id, periodicities_for_select)%>
+			  </p>
+		</div>
+		<div class="element_box">
+			Elementos en este inventario:<br>
+			<%=render :partial=>'/elements/element_list_renderer', :locals=>{:elements=>@inventory_template.elements, :action=>'remove'}%>
+		</div>
+		<div class="element_box">		
+			Agregar materiales:<br>  
+			<%=render :partial=>'/elements/element_list_renderer', :locals=>{:elements=>@raw_materials, :action=>'add'}%>
+		</div>
+		<div class="element_box">
+			Agregar ingredientes:<br>
+		  	<%=render :partial=>'/elements/element_list_renderer', :locals=>{:elements=>@ingredients, :action=>'add'}%>
+		</div>
+  <p>
+    <%= f.submit 'Listo' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @inventory_template %> |
+<%= link_to 'Back', inventory_templates_path %>

@@ -1,0 +1,15 @@
+<% form_for(@raw_material) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :unit_id %><br />
+	<%=	f.select (:unit_id, units_for_select)%>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

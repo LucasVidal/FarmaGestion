@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @inventory.name %>
+</p>
+
+<p>
+  <b>Periodicity:</b>
+  <%=h @inventory.periodicity_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

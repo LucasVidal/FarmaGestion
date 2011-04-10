@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @raw_material.name %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%=h @raw_material.unit_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_raw_material_path(@raw_material) %> |
+<%= link_to 'Back', raw_materials_path %>

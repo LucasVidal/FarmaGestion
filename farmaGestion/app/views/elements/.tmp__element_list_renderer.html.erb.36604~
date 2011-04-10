@@ -1,0 +1,13 @@
+<%if elements.empty?%>
+	<i>(-)</i>
+<%else%>
+	<ul>
+	<%elements.each do |e| %>
+		<%if action=='remove'%>
+			<li><%=link_to e.name, (remove_element_from_inventory_path + "?element_id=" + e.id.to_s) %></li>
+		<%else%>
+			<li><%=link_to e.name, (add_element_to_inventory_path + "?element_id=" + e.id.to_s) %></li>
+		<%end%>
+	<%end%>
+	</ul>
+<%end%>

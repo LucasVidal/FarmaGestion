@@ -1,0 +1,16 @@
+<h1>Editing periodicity</h1>
+
+<% form_for(@periodicity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @periodicity %> |
+<%= link_to 'Back', periodicities_path %>

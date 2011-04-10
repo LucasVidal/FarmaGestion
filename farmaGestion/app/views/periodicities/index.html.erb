@@ -1,0 +1,21 @@
+<h1>Listing periodicities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @periodicities.each do |periodicity| %>
+  <tr>
+    <td><%=h periodicity.name %></td>
+    <td><%=h periodicity.detail %></td>
+    <td><%= link_to 'Show', periodicity %></td>
+    <td><%= link_to 'Edit', edit_periodicity_path(periodicity) %></td>
+    <td><%= link_to 'Destroy', periodicity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New periodicity', new_periodicity_path %>

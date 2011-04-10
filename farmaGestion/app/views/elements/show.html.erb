@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @element.name %>
+</p>
+
+<p>
+  <b>Element type:</b>
+  <%=h @element.element_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_element_path(@element) %> |
+<%= link_to 'Back', elements_path %>

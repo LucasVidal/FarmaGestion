@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @inventory_template.name %>
+</p>
+
+<p>
+  <b>Periodicity:</b>
+  <%=h @inventory_template.periodicity_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_template_path(@inventory_template) %> |
+<%= link_to 'Back', inventory_template_path %>

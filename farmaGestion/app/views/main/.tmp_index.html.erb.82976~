@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>FarmaGestion 2.0</title>
+	</head>
+	<body>
+		Menu principal
+		<br><br>
+		<%=link_to "Ingredientes", :controller=>:ingredients%><br>
+		<%=link_to "Materia prima", :controller=>:raw_materials%><br>
+		<br>
+		<%=link_to "Plantillas de inventario", :controller=>:inventory_templates%><br>
+	</body>
+</html>
